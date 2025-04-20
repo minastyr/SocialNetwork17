@@ -1,9 +1,6 @@
-// This file sets up the main application routes and can include any additional routes if necessary.
-
+const router = require('express').Router();
 const apiRoutes = require('./api');
 
-const routes = (app) => {
-    apiRoutes(app);
-};
+router.use('/api', apiRoutes);
 
-module.exports = routes;
+module.exports = router;
